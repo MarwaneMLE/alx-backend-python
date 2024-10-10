@@ -5,9 +5,9 @@ ltts element as float
 """
 
 
-def sum_list(input_list: list) -> float:
+from typing import List
+
+
+def sum_list(input_list: List(float)) -> float:
     """ Return sum of float values in input list"""
-    sum = 0
-    for value in input_list:
-        sum += value
-    return sum
+    return float(sum(input_list))

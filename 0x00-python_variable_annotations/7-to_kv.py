@@ -5,6 +5,9 @@ and return a tuple
 """
 
 
-def to_kv(k: str, v: float or int) -> tuple:
+from typing import Union, Tuple
+
+
+def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
     """ method that return the tuple of two inputs str and flaot or int."""
-    return f"({k}, {v**2})"
+    return (k, float(v**2))

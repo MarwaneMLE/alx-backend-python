@@ -5,11 +5,9 @@ and return sum as float
 """
 
 
-def sum_mixed_list(mxd_list: list) -> float:
+from typing import List, Union
+
+
+def sum_mixed_list(mxd_list: List[Union[int, float]]) -> float:
     """Sum of mixed int and float in list and return float"""
-    sum_mxd_list = 0
-    for value in mxd_list:
-        if value is int:
-            value = float(value)
-        sum_mxd_list += value
-    return sum_mxd_list
+    return float(sum(mxd_list))
